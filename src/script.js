@@ -40,7 +40,7 @@ console.log(randomNum);
 let generateLength = function (num) {
   const stringPosition = [];
   for (i = 0; i < num; i++) {
-    stringPosition.push(Math.round(Math.random() * 26));
+    stringPosition.push(Math.round(Math.random() * 25));
   }
   return stringPosition;
 };
@@ -50,6 +50,7 @@ function lengthCheck() {
   let pass = "";
   if (defaultCharLen) {
     let stringLocation = generateLength(15);
+    console.log(stringLocation);
     for (i = 0; i < stringLocation.length; i++) {
       console.log(pass);
       pass += alphabet[stringLocation[i]];
