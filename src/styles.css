@@ -1,3 +1,5 @@
-h1 {
+.app-header {
   color: blue;
+  text-align: center;
+  margin: 20px;
 }

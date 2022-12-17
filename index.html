@@ -18,13 +18,14 @@
     <div class="container">
       <h1 class="app-header">Quick Password Generator</h1>
       <h3 class="password-output">Password Output</h3>
+      <div>customize your password</div>
       <div class="row">
         <div class="col-md-6">
           <div>Password Length</div>
           <div class="password-options">
             <div class="form-check">
               <input
-                class="form-check-input"
+                class="form-check-input default-length"
                 type="radio"
                 name="exampleRadios"
                 id="exampleRadios1"
@@ -32,31 +33,19 @@
                 checked
               />
               <label class="form-check-label" for="exampleRadios1">
-                Default radio
+                Default (10 characters)
               </label>
             </div>
             <div class="form-check">
               <input
-                class="form-check-input"
+                class="form-check-input twelve-characters"
                 type="radio"
                 name="exampleRadios"
                 id="exampleRadios2"
                 value="option2"
               />
               <label class="form-check-label" for="exampleRadios2">
-                Second default radio
-              </label>
-            </div>
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="exampleRadios"
-                id="exampleRadios2"
-                value="option2"
-              />
-              <label class="form-check-label" for="exampleRadios2">
-                Second default radio
+                12 characters
               </label>
             </div>
             <div class="form-check">
@@ -66,25 +55,37 @@
                 name="exampleRadios"
                 id="exampleRadios3"
                 value="option3"
-                disabled
               />
               <label class="form-check-label" for="exampleRadios3">
-                Disabled radio
+                15 characters
               </label>
             </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="exampleRadios"
+                id="exampleRadios4"
+                value="option4"
+              />
+              <label class="form-check-label" for="exampleRadios3">
+                Other
+              </label>
+            </div>
+            <input type="text" />
           </div>
         </div>
         <div class="col-md-6">
           <ul class="list-group">
             <li class="list-group-item">
               <input
-                class="form-check-input me-1"
+                class="form-check-input me-1 numbers"
                 type="checkbox"
                 value=""
                 id="firstCheckbox"
               />
               <label class="form-check-label" for="firstCheckbox"
-                >First checkbox</label
+                >Numbers</label
               >
             </li>
             <li class="list-group-item">
@@ -95,29 +96,29 @@
                 id="secondCheckbox"
               />
               <label class="form-check-label" for="secondCheckbox"
-                >Second checkbox</label
+                >Uppercase</label
               >
             </li>
             <li class="list-group-item">
               <input
-                class="form-check-input me-1"
+                class="form-check-input me-1 lowercase"
                 type="checkbox"
                 value=""
                 id="thirdCheckbox"
               />
               <label class="form-check-label" for="thirdCheckbox"
-                >Third checkbox</label
+                >Lowercase</label
               >
             </li>
             <li class="list-group-item">
               <input
-                class="form-check-input me-1"
+                class="form-check-input me-1 symbols"
                 type="checkbox"
                 value=""
-                id="thirdCheckbox"
+                id="fourthCheckbox"
               />
-              <label class="form-check-label" for="thirdCheckbox"
-                >Third checkbox</label
+              <label class="form-check-label" for="fourthCheckbox"
+                >Symbols</label
               >
             </li>
           </ul>
