@@ -3,3 +3,10 @@
   text-align: center;
   margin: 20px;
 }
+
+.btn {
+  margin: 10px;
+  font-size: 10px;
+  border-radius: 10px;
+  padding: 10px;
+}
