@@ -32,14 +32,14 @@ body {
 }
 
 .container {
-  margin: 0 auto;
   background-color: white;
-  margin: 100px;
-  margin-bottom: 20px;
+
+  margin-top: 50px;
   border: 0.5px solid rgb(186, 186, 186);
   padding: 10px;
   border-radius: 10px;
   box-shadow: 10px 5px 5px rgb(186, 186, 186);
+  max-width: 700px;
 }
 .buttons-container {
   text-align: center;
