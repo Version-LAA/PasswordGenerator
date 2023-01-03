@@ -1,3 +1,7 @@
+body {
+  /* From https://css.glass */
+  background: whitesmoke;
+}
 .app-header {
   color: #18978f;
   text-align: center;
@@ -32,6 +36,7 @@
 
 .container {
   margin: 100px;
+  margin-bottom: 20px;
   border: 0.5px solid rgb(186, 186, 186);
   padding: 10px;
   border-radius: 10px;
@@ -49,4 +54,16 @@
 }
 .form-check {
   font-family: "Quantico", sans-serif;
+}
+
+#other-input {
+  /* pointer-events: none; */
+}
+
+footer {
+  text-align: center;
+}
+a {
+  color: black;
+  text-decoration: none;
 }
