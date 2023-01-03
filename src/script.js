@@ -51,9 +51,11 @@ const alphabet = [
 const symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "?"];
 
 let randomNum = Math.round(Math.random() * 48);
-const defaultCharLen = document.getElementById("exampleRadios1").checked;
-const twelveCharLen = document.getElementById("exampleRadios2").checked;
-const fifteenCharLen = document.getElementById("exampleRadios3").checked;
+const defaultCharLen = document.getElementById("exampleRadios1");
+const twelveCharLen = document.getElementById("exampleRadios2");
+const fifteenCharLen = document.getElementById("exampleRadios3");
+const otherLen = document.getElementById("exampleRadios4");
+const otherInput = document.getElementById("other-input");
 let passwordOutput = document.querySelector(".password-output");
 let numOfUpperCase = Math.round(Math.random() * 3);
 let numOfSymbols = Math.round(Math.random() * 3);
@@ -67,10 +69,10 @@ let generateLength = function (num) {
   let symbols = numOfSymbols;
   totalChar -= upperCase + symbols;
 
-  console.log(totalChar);
-  console.log(upperCase);
-  console.log(symbols);
-  console.log(totalChar);
+  // console.log(totalChar);
+  // console.log(upperCase);
+  // console.log(symbols);
+  // console.log(totalChar);
 
   let stringPosition = [];
   let x;
@@ -84,28 +86,49 @@ let generateLength = function (num) {
   return stringPosition;
 };
 
+// check if other value is valid
+
+let checkValue = (value) => {
+  value = otherInput.value;
+  if (value > 0 && value <= 20) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
 //select password length
 function generatePassword() {
   let pass = "";
   let stringLocation;
-  if (defaultCharLen) {
+  if (defaultCharLen.checked) {
     stringLocation = generateLength(10);
-    console.log(stringLocation);
     for (i = 0; i < stringLocation.length; i++) {
       pass += alphabet[stringLocation[i]];
     }
     passwordOutput.innerText = pass;
-    // let len = pass.length;
-    // return `${pass}, ${len}`;
-  } else if (twelveCharLen) {
+  } else if (twelveCharLen.checked) {
     stringLocation = generateLength(12);
-    console.log(stringLocation);
     for (i = 0; i < stringLocation.length; i++) {
       pass += alphabet[stringLocation[i]];
     }
     passwordOutput.innerText = pass;
     // let len = pass.length;
     // return `${pass}, ${len}`;
+  } else if (fifteenCharLen.checked) {
+    stringLocation = generateLength(15);
+    for (i = 0; i < stringLocation.length; i++) {
+      pass += alphabet[stringLocation[i]];
+    }
+    passwordOutput.innerText = pass;
+  } else if (otherLen.checked && checkValue(otherInput.value)) {
+    stringLocation = generateLength(otherInput.value);
+    for (i = 0; i < stringLocation.length; i++) {
+      pass += alphabet[stringLocation[i]];
+    }
+    passwordOutput.innerText = pass;
+  } else {
+    console.log("not valid");
   }
 }
 
