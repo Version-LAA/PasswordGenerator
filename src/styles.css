@@ -1,7 +1,9 @@
 .app-header {
-  color: blue;
+  color: #18978f;
   text-align: center;
   margin: 20px;
+  font-family: "Quantico", sans-serif;
+  font-weight: bold;
 }
 
 .btn {
@@ -12,13 +14,16 @@
 }
 
 .password-output {
-  border: 1px solid black;
+  border: 1px solid rgb(186, 186, 186);
   border-radius: 5px;
   text-align: center;
+  font-family: "Quantico", sans-serif;
 }
 
 .container {
   margin: 100px;
-  border: 1px solid black;
+  border: 0.5px solid rgb(186, 186, 186);
   padding: 10px;
+  border-radius: 10px;
+  box-shadow: 10px 5px 5px rgb(186, 186, 186);
 }
