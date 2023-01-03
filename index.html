@@ -23,10 +23,11 @@
   <body>
     <div class="container">
       <h1 class="app-header">P@ssW0rdGen</h1>
-
-      <div class="row">
-        <div class="col-md-6">
-          <h3 class="password-output">[ -- Generate --]</h3>
+      <div class="output">
+        <h3 class="password-output">[...]</h3>
+      </div>
+      <div class="d-flex justify-content-around">
+        <div>
           <div id="pass-instructions">Select your password length:</div>
 
           <div class="password-options">
@@ -79,8 +80,16 @@
                 Other
               </label>
             </div>
-            <input type="text" />
+            <input id="other-input" type="text" />
           </div>
+        </div>
+        <div class="p-4">
+          <img src="/img/password.gif" alt="" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
           <div class="buttons-container">
             <button
               id="generateButton"
@@ -100,6 +109,11 @@
         </div>
       </div>
     </div>
+    <footer>
+      <a href="https://github.com/Version-LAA/PasswordGenerator"
+        >Open-Source: Coded by Version-LaA</a
+      >
+    </footer>
 
     <script src="/src/script.js"></script>
     <script
