@@ -61,6 +61,7 @@ let numOfUpperCase = Math.round(Math.random() * 3);
 let numOfSymbols = Math.round(Math.random() * 3);
 let numbers = Math.round(Math.random() * 2);
 let passWordButton = document.getElementById("generateButton");
+const copyButton = document.getElementById("copyButton");
 
 // function to generate length of string
 let generateLength = function (num) {
@@ -106,13 +107,12 @@ function generatePassword() {
     for (i = 0; i < stringLocation.length; i++) {
       pass += alphabet[stringLocation[i]];
     }
-    passwordOutput.innerText = pass;
   } else if (twelveCharLen.checked) {
     stringLocation = generateLength(12);
     for (i = 0; i < stringLocation.length; i++) {
       pass += alphabet[stringLocation[i]];
     }
-    passwordOutput.innerText = pass;
+
     // let len = pass.length;
     // return `${pass}, ${len}`;
   } else if (fifteenCharLen.checked) {
@@ -120,23 +120,52 @@ function generatePassword() {
     for (i = 0; i < stringLocation.length; i++) {
       pass += alphabet[stringLocation[i]];
     }
-    passwordOutput.innerText = pass;
-  } else if (otherLen.checked && checkValue(otherInput.value)) {
+  } else if (otherLen.checked) {
+    otherInput.removeAttribute("disabled");
     stringLocation = generateLength(otherInput.value);
     for (i = 0; i < stringLocation.length; i++) {
       pass += alphabet[stringLocation[i]];
     }
-    passwordOutput.innerText = pass;
   } else {
     console.log("not valid");
   }
+
+  return pass;
 }
 
+let passGen = () => {
+  let copyStatus = false;
+  let password = generatePassword();
+  console.log(password);
+  passwordOutput.innerText = password;
+
+  copyButton.onclick = function () {
+    copyStatus = true;
+    if (copyStatus === true) {
+      copyButton.innerHTML = "COPIED";
+      navigator.clipboard.writeText(password);
+    }
+  };
+
+  return password;
+};
+
+// copyButton.onclick = navigator.clipboard.writeText(pass);
+// passwordOutput.innerText = pass;
 // passWordButton.addEventListener("click", test() {
 //   passwordOutput.innerHTML="test";
 // });
 
-passWordButton.addEventListener("click", generatePassword);
+// copyButton.onclick = navigator.clipboard.writeText(generatePassword());
+
+// let copyPas = (value) => {
+//   value = passGen();
+//   navigator.clipboard.writeText(value);
+//   console.log(value);
+// };
+
+passWordButton.addEventListener("click", passGen);
+// copyButton.addEventListener("click", copyPas);
 
 // passwordOutput.innerHTML = generatePassword();
 // console.log(randomNum);
