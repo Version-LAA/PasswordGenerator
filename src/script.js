@@ -100,6 +100,7 @@ let checkValue = (value) => {
 
 //select password length
 function generatePassword() {
+  copyButton.innerHTML = "Copy to Clipboard";
   let pass = "";
   let stringLocation;
   if (defaultCharLen.checked) {
@@ -149,20 +150,6 @@ let passGen = () => {
 
   return password;
 };
-
-// copyButton.onclick = navigator.clipboard.writeText(pass);
-// passwordOutput.innerText = pass;
-// passWordButton.addEventListener("click", test() {
-//   passwordOutput.innerHTML="test";
-// });
-
-// copyButton.onclick = navigator.clipboard.writeText(generatePassword());
-
-// let copyPas = (value) => {
-//   value = passGen();
-//   navigator.clipboard.writeText(value);
-//   console.log(value);
-// };
 
 passWordButton.addEventListener("click", passGen);
 // copyButton.addEventListener("click", copyPas);
