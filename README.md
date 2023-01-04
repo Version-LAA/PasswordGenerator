@@ -1,3 +1,3 @@
-<h1> P@ssW0rdGen</h1>
+<h1 align="center"> P@ssW0rdGen</h1>
 
 ---
