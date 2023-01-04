@@ -12,4 +12,4 @@
 
 ## Demo
 
-<img src="/img/demo.gif" alt="password image" width="300"/>
+<img align ="center" src="/img/demo.gif" alt="password image" width="650"/>
