@@ -1,4 +1,3 @@
-<div align="center">
-# P@ssW0rdGen
-</div>
+<h1> P@ssW0rdGen</h1>
+
 ---
