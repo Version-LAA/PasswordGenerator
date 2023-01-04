@@ -1,4 +1,4 @@
-<img src="/img/password.png" alt="password image" width="100"/>
+<div align="center"> <img src="/img/password.png" alt="password image" width="100"/></div>
 
 <h1 align="center"> P@ssW0rdGen</h1>
 
@@ -12,4 +12,4 @@
 
 ## Demo
 
-<img align ="center" src="/img/demo.gif" alt="password image" width="650"/>
+<div align="center"><img align ="center" src="/img/demo.gif" alt="password image" width="650"/></div>
