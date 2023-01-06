@@ -98,6 +98,36 @@ let checkValue = (value) => {
   }
 };
 
+//generate random capatal letter patter
+let capitalLetterSet = (pass) => {
+  let passArray = pass.split("");
+  console.log(passArray);
+  let capLocation = Math.floor(Math.random() * pass.length);
+  console.log(capLocation);
+  let status;
+
+  if (
+    passArray[capLocation].toLowerCase() != passArray[capLocation].toUpperCase()
+  ) {
+    passArray[capLocation] = passArray[capLocation].toUpperCase();
+    console.log(passArray[capLocation]);
+    status = true;
+  } else {
+    status = false;
+    while (status === false) {
+      capLocation = Math.floor(Math.random() * pass.length);
+      if (
+        passArray[capLocation].toLowerCase() !=
+        passArray[capLocation].toUpperCase()
+      ) {
+        passArray[capLocation] = passArray[capLocation].toUpperCase();
+        status = true;
+      }
+    }
+  }
+  return passArray.join("");
+};
+
 //select password length
 function generatePassword() {
   copyButton.innerHTML = "Copy to Clipboard";
@@ -130,25 +160,28 @@ function generatePassword() {
   } else {
     console.log("not valid");
   }
-
+  capitalLetterSet(pass);
   return pass;
 }
 
 let passGen = () => {
   let copyStatus = false;
   let password = generatePassword();
-  console.log(password);
-  passwordOutput.innerText = password;
+  let newPass = capitalLetterSet(password);
+
+  passwordOutput.innerText = newPass;
 
   copyButton.onclick = function () {
     copyStatus = true;
     if (copyStatus === true) {
       copyButton.innerHTML = "COPIED";
-      navigator.clipboard.writeText(password);
+      navigator.clipboard.writeText(newPass);
     }
   };
 
-  return password;
+  console.log(`new ${newPass}`);
+
+  return newPass;
 };
 
 passWordButton.addEventListener("click", passGen);
