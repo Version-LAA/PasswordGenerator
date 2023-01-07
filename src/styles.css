@@ -74,6 +74,6 @@ img {
 .output {
   margin-bottom: 20px;
   border-radius: 5px;
-  border: 1px solid rgb(186, 186, 186);
+  border: 2px solid rgb(186, 186, 186);
   padding: 1px;
 }
